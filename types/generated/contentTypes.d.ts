@@ -801,13 +801,13 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String & Attribute.Required & Attribute.Unique;
-    Description: Attribute.Text & Attribute.Required;
     img: Attribute.Media<'images', true>;
     categories: Attribute.Relation<
       'api::blog.blog',
       'manyToMany',
       'api::category.category'
     >;
+    description: Attribute.Blocks & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

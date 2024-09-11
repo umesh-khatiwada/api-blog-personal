@@ -17,10 +17,6 @@
       "required": true,
       "unique": true
     },
-    "Description": {
-      "type": "text",
-      "required": true
-    },
     "img": {
       "type": "media",
       "multiple": true,
@@ -34,6 +30,10 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "blogs"
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
     }
   }
 }
