@@ -19,7 +19,7 @@
     },
     "img": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images"
@@ -34,6 +34,13 @@
     "description": {
       "type": "blocks",
       "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "minLength": 5,
+      "maxLength": 50,
+      "unique": true
     }
   }
 }
