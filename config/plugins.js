@@ -15,7 +15,9 @@
               },
             },
             actionOptions: {
-              upload: {},
+              upload: {
+                ACL: 'public-read', // or another ACL
+              },
               uploadStream: {},
               delete: {},
             },
