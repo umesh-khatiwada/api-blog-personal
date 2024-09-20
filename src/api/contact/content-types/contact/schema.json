@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contactme",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 80,
+      "minLength": 1
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Subject": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "minLength": 1
+    },
+    "Message": {
+      "type": "string",
+      "required": true,
+      "maxLength": 400,
+      "minLength": 1
+    }
+  }
+}

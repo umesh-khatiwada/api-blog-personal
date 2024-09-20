@@ -22,6 +22,12 @@
       "relation": "manyToMany",
       "target": "api::blog.blog",
       "inversedBy": "categories"
+    },
+    "sub_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sub-category.sub-category",
+      "mappedBy": "category"
     }
   }
 }

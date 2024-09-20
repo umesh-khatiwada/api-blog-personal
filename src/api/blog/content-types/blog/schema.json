@@ -41,6 +41,26 @@
       "minLength": 5,
       "maxLength": 50,
       "unique": true
+    },
+    "viewCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "shortDescription": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "blog"
+    },
+    "sub_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sub-category.sub-category",
+      "inversedBy": "blogs"
     }
   }
 }
